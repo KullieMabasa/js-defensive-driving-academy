@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a3ad380f02.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ysabeau+SC:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Defensive Driving Academy: Registration</title>
+
+    <script src="src/script-file.js" defer></script>
+  </head>
+  <body>
+    <!--header section-->
+    <header>
+      <div class="container">
+        <img src="images/logo.jpg" alt="business logo" width="70px" />
+
+        <h1>Defensive Driving Academy</h1>
+      </div>
+    </header>
+
+    <!--navigation bar-->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="clientRegistrationForm.html">Registrations</a>
+        </li>
+        <li>
+          <a href="orderSubmit.html">Order Details</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--main section-->
+    <main>
+      <div class="register-container">
+        <h2>Registration Form</h2>
+        <form id="registration-form" method="get" action="orderSubmit.html">
+          <label for="preferred-name">Preferred Name:</label>
+          <input type="text" id="preferred-name" required />
+
+          <label for="client-full-names">Client Full Names as on ID:</label>
+          <input type="text" id="client-full-names" required />
+
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" required />
+
+          <label for="id-number">ID Number:</label>
+          <input type="text" id="id-number" required />
+
+          <label for="telephone-work">Telephone Work:</label>
+          <input type="tel" id="telephone-work" required />
+
+          <label for="cellphone-number">Cellphone Number:</label>
+          <input type="tel" id="cellphone-number" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" required />
+
+          <div class="home-address">
+            <label for="address-line1">Address Line 1:</label>
+            <input type="text" id="address-line1" required />
+
+            <label for="address-line2">Address Line 2:</label>
+            <input type="text" id="address-line2" required />
+
+            <label for="city">City</label>
+            <input type="text" required id="city" name="city" />
+
+            <label for="state">State</label>
+            <select id="state" name="state">
+              <option value=""></option>
+              <option value="EC">Eastern Cape</option>
+              <option value="FS">Free State</option>
+              <option value="GP">Gauteng</option>
+              <option value="KZN">Kwazulu Natal</option>
+              <option value="LP">Limpopo</option>
+              <option value="MP">Mpumalanga</option>
+              <option value="NW">North West</option>
+              <option value="NC">Northern Cape</option>
+              <option value="WC">Western Cape</option>
+            </select>
+
+            <label for="country">Country</label>
+            <input
+              type="text"
+              required
+              id="country"
+              name="country"
+              value="South Africa"
+            />
+
+            <label for="code"> Code</label>
+            <input type="text" required id="code" name="code" />
+          </div>
+          <div class="postal-address">
+            <label>
+              <input type="checkbox" id="copy-address" />
+              Same as Home Address
+            </label>
+
+            <label for="address-line1-postal">Address Line 1:</label>
+            <input type="text" id="address-line1-postal" required />
+
+            <label for="address-line2-postal">Address Line 2:</label>
+            <input type="text" id="address-line2-postal" required />
+
+            <label for="city-postal">City <span>*</span></label>
+            <input type="text" required id="city-postal" name="cityp" />
+
+            <label for="state-postal">State <span>*</span></label>
+            <select id="state-postal" name="state">
+              <option value=""></option>
+              <option value="EC">Eastern Cape</option>
+              <option value="FS">Free State</option>
+              <option value="GP">Gauteng</option>
+              <option value="KZN">Kwazulu Natal</option>
+              <option value="LP">Limpopo</option>
+              <option value="MP">Mpumalanga</option>
+              <option value="NW">North West</option>
+              <option value="NC">Northern Cape</option>
+              <option value="WC">Western Cape</option>
+            </select>
+
+            <label for="country-postal">Country <span>*</span></label>
+            <input
+              type="text"
+              required
+              id="country-postal"
+              name="country"
+              value="South Africa"
+            />
+
+            <label for="code-postal">Postal Code <span>*</span></label>
+            <input type="text" required id="code-postal" name="code" />
+          </div>
+          <label for="learners-license">
+            Do you have a valid learners license?
+          </label>
+          <select id="learners-license">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <label for="learners-license-expiry"
+            >Learners License Expiry Date:</label
+          >
+          <input type="date" id="learners-license-expiry" />
+
+          <label for="parent-contact">
+            Parents Contact Number and Names (if a minor):
+          </label>
+          <input type="text" id="parent-contact" />
+
+          <label for="license-type">Type of License Required:</label>
+          <select id="license-type">
+            <option value=""></option>
+            <option value="motorcycle">Code A - Motorcycle</option>
+            <option value="light mootor vehicles">
+              Code B - Light Motor Vehicles
+            </option>
+            <option value="heavy motor vehicles">
+              Code C - Heavy Motor Vehicles
+            </option>
+            <option value="combination and articulated vehicles">
+              Code D - Combination and Articulated Vehicles
+            </option>
+          </select>
+
+          <label for="lessons-required">Number of Lessons Required:</label>
+          <select id="lessons-required">
+            <option value=""></option>
+            <option value="5">5 Lessons - R750</option>
+            <option value="10">10 Lessons - R1 500</option>
+            <option value="15">15 Lessons - R2 200</option>
+            <option value="20">20 Lessons - R2 900</option>
+            <option value="25">25 Lessons - R3 600</option>
+            <option value="30">30 Lessons - R4 250</option>
+          </select>
+
+          <label for="study-material">Study Material:</label>
+          <select type="text" id="study-material">
+            <option value=""></option>
+            <option value="Learners License Test">
+              Learners License Test - R1 000
+            </option>
+            <option value="Driving License Renewal">
+              Driving License Renewal - R1 000
+            </option>
+            <option value="Learner License Classes">
+              Learner License Classes - R1 000
+            </option>
+            <option value="Driver's License">Driver's License - R5 000</option>
+          </select>
+
+          <label for="credit-card-name">Name on Credit Card:</label>
+          <input type="text" id="credit-card-name" required />
+
+          <label for="credit-card-type">Credit Card Type:</label>
+          <select id="credit-card-type">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+
+          <label for="credit-card-number">Credit Card Number:</label>
+          <input type="text" id="credit-card-number" required />
+
+          <label for="expiration-date">Expiration Month/Year:</label>
+          <select id="expiration-date">
+            <option value="01/2023">01/2023</option>
+            <option value="02/2023">02/2023</option>
+            <option value="04/2023">04/2023</option>
+            <option value="05/2023">05/2023</option>
+            <option value="06/2023">06/2023</option>
+            <option value="07/2023">07/2023</option>
+            <option value="08/2023">08/2023</option>
+            <option value="09/2023">09/2023</option>
+          </select>
+
+          <label for="cvc-number">CVC Number:</label>
+          <input type="text" id="cvc-number" required />
+
+          <button id="submitButton">
+            <input type="submit" value="submit" class="submitButton" />
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!--Footer section-->
+    <footer>
+      <div class="container">
+        <p>&copy; Copyright 2021. All Rights Reserved.</p>
+
+        <p>
+          <a href="mailto:drivedefensive08@gmail.com"
+            ><i class="fa-regular fa-envelope"> </i></a
+          >drivedefensive08@gmail.com
+        </p>
+        <p>
+          <a href="tel:+2799599075"><i class="fa-solid fa-phone"></i></a
+          >+2799599075
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Function to copy the home address to the postal address
+      function copyFormDetails() {
+        let addressLine1 = document.getElementById("address-line1").value;
+        let addressLine2 = document.getElementById("address-line2").value;
+        let city = document.getElementById("city").value;
+        let state = document.getElementById("state").value;
+        let code = document.getElementById("code").value;
+        let copyAddress = document.getElementById("copy-address").checked;
+
+        if (copyAddress) {
+          document.getElementById("address-line1-postal").value = addressLine1;
+          document.getElementById("address-line2-postal").value = addressLine2;
+          document.getElementById("city-postal").value = city;
+          document.getElementById("state-postal").value = state;
+          document.getElementById("code-postal").value = code;
+        }
+      }
+
+      // Add event listener to the copyAddress checkbox
+      let copyAddressCheckbox = document.getElementById("copy-address");
+      copyAddressCheckbox.addEventListener("click", copyFormDetails);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+:root {
+  --primary-color: #f5f5f5d7;
+  --secondary-color: red;
+  --highligher-color: blue;
+  --font-heading: "Ysabeau SC", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --form-color: rgb(223, 223, 247);
+}
+
+/* CSS Reset */
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Change the background color of the body tag */
+body {
+  background-color: var(--primary-color);
+  padding-top: 160px;
+}
+
+/*Style rule for header*/
+header {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 20px;
+}
+
+header img {
+  margin: 0;
+  width: 70px;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+  font-family: var(--font-heading);
+  font-size: 44px;
+}
+
+/* Style rule for navigation area*/
+nav {
+  background-color: var(--highligher-color);
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  z-index: 999;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 20px;
+  margin: 0;
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--font-body);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  color: black;
+  font-size: 38px;
+  text-align: center;
+}
+
+/* Style rule for the footer*/
+footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 70px;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 20px;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Style rule for the lightbox*/
+#lightbox {
+  background-color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+  height: 100vh; /* Set the height of the lightbox to the full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column; /* Arrange images vertically */
+  align-items: center;
+  background-color: rgb(223, 223, 247);
+}
+
+.gallery img {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add some bottom margin between images */
+}
+
+.expanded-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  z-index: 9999;
+  overflow-y: auto; /* Enable vertical scrolling for the expanded image */
+}
+
+.expanded-container img {
+  max-width: 90%;
+  max-height: 90vh; /* Limit the maximum height of the expanded image to 90% of the viewport height */
+  object-fit: contain;
+}
+
+.dimmed {
+  overflow: hidden;
+}
+
+/*Style rule fr the Registration fom*/
+
+.register-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.register-container form {
+  display: grid;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: rgb(223, 223, 247);
+}
+
+.register-container label {
+  font-weight: bold;
+}
+
+.register-container select#study-material {
+  width: 100%;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submitButton {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 200ms ease-in-out;
+}
+
+.submitButton:hover {
+  color: red;
+  background-color: #fff;
+  border: 1px solid red;
+}
+
+#submitButton {
+  background-color: rgb(223, 223, 247);
+  border: none;
+}
+
+/*Style rule for Order Submitted*/
+section > h1 {
+  font-size: 1.4em;
+  margin: 20px 0 20px 30px;
+}
+
+table {
+  margin-left: 30px;
+  border-collapse: collapse;
+  margin-right: 1%;
+  background-color: rgb(223, 223, 247);
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+table td {
+  border: 1px solid rgb(179, 179, 209);
+  padding: 5px;
+}
+
+table tr td:first-of-type {
+  background-color: rgb(223, 223, 247);
+}
+
+/* Media queries for tablet */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Decrease the font-size for tablet */
+  }
+
+  /* Modify header and footer content for tablet */
+  header {
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+/* Media queries for mobile */
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px; /* Decrease the font-size for mobile */
+  }
+
+  /* Modify header and footer content for mobile */
+  header {
+    text-align: center;
+  }
+
+  header img {
+    width: 50px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+  }
+
+  footer {
+    text-align: center;
+    font-size: x-small;
+  }
+}

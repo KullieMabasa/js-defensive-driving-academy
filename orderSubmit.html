@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a3ad380f02.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ysabeau+SC:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Defensive Driving Academy: Order Submit</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="src/script-file.js" defer></script>
+  </head>
+  <body>
+    <!--header section-->
+    <header>
+      <div class="container">
+        <img src="images/logo.jpg" alt="business logo" width="70px" />
+        <h1>Defensive Driving Academy</h1>
+      </div>
+    </header>
+
+    <!--navigation bar-->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="clientRegistrationForm.html">Registrations</a>
+        </li>
+        <li>
+          <a href="orderSubmit.html">Order Details</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--main section-->
+    <main>
+      <h2>Order Details</h2>
+
+      <section>
+        <table id="order-submit">
+          <tr>
+            <td>Preferred Name</td>
+            <td><span id="preferred-name"></span></td>
+          </tr>
+          <tr>
+            <td>Client Full Names as on ID</td>
+            <td><span id="client-full-names"></span></td>
+          </tr>
+          <tr>
+            <td>Surname</td>
+            <td><span id="surname"></span></td>
+          </tr>
+          <tr>
+            <td>ID Number</td>
+            <td><span id="id-number"></span></td>
+          </tr>
+          <tr>
+            <td>Telephone Work</td>
+            <td><span id="telephone-work"></span></td>
+          </tr>
+          <tr>
+            <td>Cellphone Number</td>
+            <td><span id="cellphone-number"></span></td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td><span id="email"></span></td>
+          </tr>
+          <tr>
+            <td>Address Line 1</td>
+            <td><span id="address-line1"></span></td>
+          </tr>
+          <tr>
+            <td>Address Line 2</td>
+            <td><span id="address-line2"></span></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><span id="city"></span></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td><span id="state"></span></td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td><span id="country"></span></td>
+          </tr>
+          <tr>
+            <td>Code</td>
+            <td><span id="code"></span></td>
+          </tr>
+          <tr>
+            <td>Learners License</td>
+            <td>
+              <span id="learner-license"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>parent contact</td>
+            <td>
+              <span id="parent-contact"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>license type</td>
+            <td>
+              <span id="license-type"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>lessons-required</td>
+            <td>
+              <span id="lessons-required"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>study-material</td>
+            <td>
+              <span id="study-material"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>credit-card-name</td>
+            <td>
+              <span id="credit-card-name"></span>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <!--Footer section-->
+    <footer>
+      <div class="container">
+        <p>&copy; Copyright 2021. All Rights Reserved.</p>
+
+        <p>
+          <a href="mailto:drivedefensive08@gmail.com"
+            ><i class="fa-regular fa-envelope"> </i></a
+          >drivedefensive08@gmail.com
+        </p>
+        <p>
+          <a href="tel:+2799599075"><i class="fa-solid fa-phone"></i></a
+          >+2799599075
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("load", function () {
+        // Retrieve the field/value pairs from the URL
+        var formData = location.search.slice(1);
+        formData = formData.replace(/\+/g, " ");
+        formData = decodeURIComponent(formData);
+        let formFields = formData.split(/[&=]/g);
+
+        // Write the field values to the order-submit table
+        document.getElementById("preferred-name").textContent = formFields[1];
+        document.getElementById("client-full-names").textContent =
+          formFields[3];
+        document.getElementById("surname").textContent = formFields[5];
+        document.getElementById("id-number").textContent = formFields[7];
+        document.getElementById("telephone-work").textContent = formFields[9];
+        document.getElementById("cellphone-number").textContent =
+          formFields[11];
+        document.getElementById("email").textContent = formFields[13];
+        document.getElementById("address-line1").textContent = formFields[15];
+        document.getElementById("address-line2").textContent = formFields[17];
+        document.getElementById("city").textContent = formFields[19];
+        document.getElementById("state").textContent = formFields[21];
+        document.getElementById("country").textContent = formFields[23];
+        document.getElementById("code").textContent = formFields[25];
+        document.getElementById("learner-license").textContent = formFields[27];
+        document.getElementById("parent-contact").textContent = formFields[29];
+        document.getElementById("license-type").textContent = formFields[31];
+        document.getElementById("lessons-required").textContent =
+          formFields[33];
+        document.getElementById("study-material").textContent = formFields[35];
+        document.getElementById("credit-card-name").textContent =
+          formFields[37];
+      });
+    </script>
+  </body>
+</html>

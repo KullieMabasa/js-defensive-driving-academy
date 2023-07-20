@@ -3,16 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Defensive Driving Academy: Homepage</title>
-  </head>
-  <body></body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/a3ad380f02.js"
       crossorigin="anonymous"
@@ -24,14 +14,14 @@
       rel="stylesheet"
     />
     <title>Defensive Driving Academy: Homepage</title>
-    <link rel="stylesheet" href="stylesheet/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="src/script-file.js" defer></script>
   </head>
   <body>
     <!--header section-->
     <header>
       <div class="container">
         <img src="images/logo.jpg" alt="business logo" width="70px" />
-
         <h1>Defensive Driving Academy</h1>
       </div>
     </header>
@@ -42,20 +32,23 @@
         <li>
           <a href="index.html">Home</a>
         </li>
+
         <li>
-          <a href="packages.html">Packages</a>
+          <a href="clientRegistrationForm.html">Registrations</a>
         </li>
         <li>
-          <a href="registrations.html">Registrations</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact Us</a>
+          <a href="orderSubmit.html">Order Details</a>
         </li>
       </ul>
     </nav>
 
     <!--main section-->
-    <main></main>
+    <main>
+      <h2>My Gallery</h2>
+      <div id="lightbox">
+        <div class="gallery"></div>
+      </div>
+    </main>
 
     <!--Footer section-->
     <footer>
@@ -64,10 +57,12 @@
 
         <p>
           <a href="mailto:drivedefensive08@gmail.com"
-            ><i class="fa-regular fa-envelope"> </i
-          ></a>
-          &nbsp;
-          <a href="tel:+2799599075"><i class="fa-solid fa-phone"></i></a>
+            ><i class="fa-regular fa-envelope"> </i></a
+          >drivedefensive08@gmail.com
+        </p>
+        <p>
+          <a href="tel:+2799599075"><i class="fa-solid fa-phone"></i></a
+          >+2799599075
         </p>
       </div>
     </footer>
