@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a3ad380f02.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ysabeau+SC:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+     <script src="src/script-file.js" defer></script>
+     <script src="src/register.js"></script>
+    <title>Defensive Driving Academy: Client Payment Form</title>
+  </head>
+<body>
+     <!--header section-->
+     <header>
+        <div class="container">
+          <img src="images/logo.jpg" alt="business logo" width="70px" />
+  
+          <h1>Defensive Driving Academy</h1>
+        </div>
+      </header>
+  
+      <!--navigation bar-->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="clientRegistrationForm.html">Registration Form</a>
+          </li>
+          <li>
+            <a href="staff.html">Staff</a>
+          </li>
+        </ul>
+      </nav>
+
+    <main>
+        <div class="register-container">
+            <h2>Payment Form</h2>
+
+            <form id="payment-form" method="get" action="orderSubmit.html">
+                <!-- Number of lessons required -->
+                <label for="lessons-required">Number of Lessons Required:</label>
+                <select id="lessons-required" name="lessons-required">
+                    <option value=""></option>
+                    <option value="5">5 Lessons - R750</option>
+                    <option value="10">10 Lessons - R1 500</option>
+                    <option value="15">15 Lessons - R2 200</option>
+                    <option value="20">20 Lessons - R2 900</option>
+                    <option value="25">25 Lessons - R3 600</option>
+                    <option value="30">30 Lessons - R4 250</option>
+                </select>
+
+                <!-- Study material -->
+                <label for="study-material">Study Material:</label>
+                <select id="study-material" name="study-material">
+                    <option value=""></option>
+                    <option value="Learners License Test">Learners License Test - R1 000</option>
+                    <option value="Driving License Renewal">Driving License Renewal - R1 000</option>
+                    <option value="Learner License Classes">Learner License Classes - R1 000</option>
+                    <option value="Driver's License">Driver's License - R5 000</option>
+                </select>
+
+                <!-- Name on Credit Card -->
+                <label for="credit-card-name">Name on Credit Card:</label>
+                <input type="text" id="credit-card-name" name="credit-card-name" required />
+
+                <!-- Credit Card Type -->
+                <label for="credit-card-type">Credit Card Type:</label>
+                <select id="credit-card-type" name="credit-card-type">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+
+                <!-- Credit Card Number -->
+                <label for="credit-card-number">Credit Card Number:</label>
+                <input type="text" id="credit-card-number" name="credit-card-number" required />
+
+                <!-- Expiration Month/Year -->
+                <label for="expiration-date">Expiration Month/Year:</label>
+                <select id="expiration-date" name="expiration-date">
+                      <option value="01/2023">01/2023</option>
+                      <option value="02/2023">02/2023</option>
+                      <option value="04/2023">04/2023</option>
+                      <option value="05/2023">05/2023</option>
+                      <option value="06/2023">06/2023</option>
+                      <option value="07/2023">07/2023</option>
+                      <option value="08/2023">08/2023</option>
+                      <option value="09/2023">09/2023</option>
+                
+                </select>
+
+                <!-- CVC Number -->
+                <label for="cvc-number">CVC Number:</label>
+                <input type="text" id="cvc-number" name="cvc-number" required />
+
+                <!-- Include hidden input to transfer client info -->
+                <input type="hidden" id="client-info" name="client-info" value="Include client info here">
+
+                <!-- Submit button to complete the registration -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+        <!--Footer section-->
+        <footer>
+            <div class="container">
+              <p>&copy; Copyright 2021. All Rights Reserved.</p>
+      
+              <p>
+                <a href="mailto:drivedefensive08@gmail.com"
+                  ><i class="fa-regular fa-envelope"> </i></a
+                >drivedefensive08@gmail.com
+              </p>
+              <p>
+                <a href="tel:+2799599075"><i class="fa-solid fa-phone"></i></a
+                >+2799599075
+              </p>
+            </div>
+          </footer>
+</body>
+</html>
