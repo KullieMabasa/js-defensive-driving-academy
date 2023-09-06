@@ -14,10 +14,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
-    <title>Defensive Driving Academy: Registration</title>
-
     <script src="src/script-file.js" defer></script>
+    <script src="src/register.js"></script>
+    <title>Defensive Driving Academy: Client Registration Form</title>
   </head>
+
   <body>
     <!--header section-->
     <header>
@@ -34,21 +35,23 @@
         <li>
           <a href="index.html">Home</a>
         </li>
-
         <li>
-          <a href="clientRegistrationForm.html">Registrations</a>
+          <a href="clientRegistrationForm.html">Registration Form</a>
         </li>
         <li>
-          <a href="orderSubmit.html">Order Details</a>
+          <a href="staff.html">Staff</a>
         </li>
       </ul>
     </nav>
 
     <!--main section-->
     <main>
+      
       <div class="register-container">
         <h2>Registration Form</h2>
-        <form id="registration-form" method="get" action="orderSubmit.html">
+
+        <form id="registration-form" method="get" action="clientPaymentForm.html" id="passwordForm" onsubmit="return validatePassword()">
+
           <label for="preferred-name">Preferred Name:</label>
           <input type="text" id="preferred-name" required />
 
@@ -180,65 +183,17 @@
             </option>
           </select>
 
-          <label for="lessons-required">Number of Lessons Required:</label>
-          <select id="lessons-required">
-            <option value=""></option>
-            <option value="5">5 Lessons - R750</option>
-            <option value="10">10 Lessons - R1 500</option>
-            <option value="15">15 Lessons - R2 200</option>
-            <option value="20">20 Lessons - R2 900</option>
-            <option value="25">25 Lessons - R3 600</option>
-            <option value="30">30 Lessons - R4 250</option>
-          </select>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <span id="passwordError" style="color: red;"></span><br>
 
-          <label for="study-material">Study Material:</label>
-          <select type="text" id="study-material">
-            <option value=""></option>
-            <option value="Learners License Test">
-              Learners License Test - R1 000
-            </option>
-            <option value="Driving License Renewal">
-              Driving License Renewal - R1 000
-            </option>
-            <option value="Learner License Classes">
-              Learner License Classes - R1 000
-            </option>
-            <option value="Driver's License">Driver's License - R5 000</option>
-          </select>
-
-          <label for="credit-card-name">Name on Credit Card:</label>
-          <input type="text" id="credit-card-name" required />
-
-          <label for="credit-card-type">Credit Card Type:</label>
-          <select id="credit-card-type">
-            <option value="visa">Visa</option>
-            <option value="mastercard">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-
-          <label for="credit-card-number">Credit Card Number:</label>
-          <input type="text" id="credit-card-number" required />
-
-          <label for="expiration-date">Expiration Month/Year:</label>
-          <select id="expiration-date">
-            <option value="01/2023">01/2023</option>
-            <option value="02/2023">02/2023</option>
-            <option value="04/2023">04/2023</option>
-            <option value="05/2023">05/2023</option>
-            <option value="06/2023">06/2023</option>
-            <option value="07/2023">07/2023</option>
-            <option value="08/2023">08/2023</option>
-            <option value="09/2023">09/2023</option>
-          </select>
-
-          <label for="cvc-number">CVC Number:</label>
-          <input type="text" id="cvc-number" required />
-
-          <button id="submitButton">
-            <input type="submit" value="submit" class="submitButton" />
-          </button>
-        </form>
+        <input type="hidden" id="client-info" name="client-info" value="">
+        <button type="submit">Next to Payment</button>
+    </form>
       </div>
+
+      <p id="last-visited-date">Last Visited Date: </p>
+
     </main>
 
     <!--Footer section-->
@@ -259,27 +214,28 @@
     </footer>
 
     <script>
-      // Function to copy the home address to the postal address
-      function copyFormDetails() {
-        let addressLine1 = document.getElementById("address-line1").value;
-        let addressLine2 = document.getElementById("address-line2").value;
-        let city = document.getElementById("city").value;
-        let state = document.getElementById("state").value;
-        let code = document.getElementById("code").value;
-        let copyAddress = document.getElementById("copy-address").checked;
+      // Function to set and display the last visited date
+  function setLastVisitedDate() {
+  // Get the current date and time
+  const currentDate = new Date();
 
-        if (copyAddress) {
-          document.getElementById("address-line1-postal").value = addressLine1;
-          document.getElementById("address-line2-postal").value = addressLine2;
-          document.getElementById("city-postal").value = city;
-          document.getElementById("state-postal").value = state;
-          document.getElementById("code-postal").value = code;
-        }
-      }
+  const formattedDate = currentDate.toLocaleString();
 
-      // Add event listener to the copyAddress checkbox
-      let copyAddressCheckbox = document.getElementById("copy-address");
-      copyAddressCheckbox.addEventListener("click", copyFormDetails);
+  localStorage.setItem('lastVisitedDate', formattedDate);
+
+  const lastVisitedDateElement = document.getElementById('last-visited-date');
+  lastVisitedDateElement.textContent = 'Last Visited Date: ' + formattedDate;
+}
+
+if (localStorage.getItem('lastVisitedDate')) {
+
+  const lastVisitedDateElement = document.getElementById('last-visited-date');
+  lastVisitedDateElement.textContent =
+    'Last Visited Date: ' + localStorage.getItem('lastVisitedDate');
+} else {
+  
+  setLastVisitedDate();
+}
     </script>
   </body>
 </html>
