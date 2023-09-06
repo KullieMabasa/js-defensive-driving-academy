@@ -1,0 +1,82 @@
+[
+  {
+    "staff number": "001",
+    "first name": "Eunus",
+    "last name": "Lekuate",
+    "work number": "079-959-9075",
+    "job description": "Founder",
+    "work email-address": "drivedefensive08@gmail.com"
+  },
+  {
+    "staff number": "002",
+    "first name": "Mpho",
+    "last name": "Makau",
+    "work number": "078-253-2154",
+    "job description": "Co-founder",
+    "work email-address": "makaum@gmail.com"
+  },
+  {
+    "staff number": "003",
+    "first name": "James",
+    "last name": "Baloyi",
+    "work number": "078-222-7557",
+    "job description": "Instructor",
+    "work email-address": "jamesbaloyi@gmail.com"
+  },
+  {
+    "staff number": "004",
+    "first name": "Ronald",
+    "last name": "Motaung",
+    "work number": "086-276-2002",
+    "job description": "Instructor",
+    "work email-address": "rbmotaung@yahoo.com"
+  },
+  {
+    "staff number": "005",
+    "first name": "Keisha",
+    "last name": "Mbau",
+    "work number": "076-253-5787",
+    "job description": "Bookkeeper",
+    "work email-address": "keisha@gmail.com"
+  },
+  {
+    "staff number": "006",
+    "first name": "Lerato",
+    "last name": "Baloyi",
+    "work number": "069-323-2141",
+    "job description": "Administrator",
+    "work email-address": "baloyilerato@gmail.com"
+  },
+  {
+    "staff number": "007",
+    "first name": "Keisha",
+    "last name": "Makau",
+    "work number": "078-253-2154",
+    "job description": "CEO",
+    "work email-address": "keisha@gmail.com"
+  },
+  {
+    "staff number": "008",
+    "first name": "Moses",
+    "last name": "Sibanda",
+    "work number": "068-783-7754",
+    "job description": "Instructor",
+    "work email-address": "Moses88@gmail.com"
+  },
+  {
+    "staff number": "009",
+    "first name": "Kate",
+    "last name": "Phidi",
+    "work number": "072-555-5184",
+    "job description": "Administrator",
+    "work email-address": "katep@icloud.com"
+  },
+  {
+    "staff number": "010",
+    "first name": "Lerumo",
+    "last name": "Themba",
+    "work number": "082-253-2354",
+    "job description": "Instructor",
+    "work email-address": "themba01@gmail.com"
+  }
+]
